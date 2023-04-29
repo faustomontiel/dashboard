@@ -1,7 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { RxSketchLogo } from 'react-icons/rx'
+import { RxSketchLogo,RxDashboard, RxPerson } from 'react-icons/rx'
+import { HiOutlineShoppingBag } from 'react-icons/hi'
+import { FiSettings } from 'react-icons/fi'
 
 
 export default function Sidebar({ children }) {
@@ -15,6 +17,27 @@ export default function Sidebar({ children }) {
                         </div>
                     </Link>
                     <span className='border-b-[1px] border-gray-200 w-full p-2'></span>
+                    <Link rel="stylesheet" href="">
+                        <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer m-4 p-3 rounded-lg inline-block'>
+                            <RxDashboard size={20} />
+                        </div>
+                    </Link>
+                    <Link rel="stylesheet" href="/customers">
+                        <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer m-4 p-3 rounded-lg inline-block'>
+                            <RxPerson size={20} />
+                        </div>
+                    </Link>
+                    <Link rel="stylesheet" href="/orders">
+                        <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer m-4 p-3 rounded-lg inline-block'>
+                            <HiOutlineShoppingBag size={20} />
+                        </div>
+                    </Link>
+                    <Link rel="stylesheet" href="">
+                        <div className='bg-gray-100 hover:bg-gray-200 cursor-pointer m-4 p-3 rounded-lg inline-block'>
+                            <FiSettings size={20} />
+                        </div>
+                    </Link>
+
                 </div>
             </div>
             <main className='ml-20 w-full'>{children}</main>
